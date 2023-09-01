@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="style.css">
+
+    <title>Task 1.2P </title>
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+
+</head>
+
+<body>
+    <div class="top">
+        <a href="1.2p.html"> Task 1.2P - Part 1: Responsive Web Design</a>
+    </div>
+
+    <div class="top">
+        <a href="1.2java.html"> Task 1.2P - Part 2: Javascript</a>
+    </div>
+
+    <div class="middle">
+        <h1> Part 1: Responsive Web Designs</h1>
+    </div>
+
+ <p>The first example of using responsive website will be max width property. This will ensure that whe images are being used, it will not stretch past the width limit. Two good reasons for this option. The first is that it will not outstretch the image to fill up
+    the rest of the webpage. The second is that it will scale down if the image has to to fit onto the smaller devices. Folowing that step we are going to use the picture feature when if the browser is at a certain size, its either going to show the larger image or 
+    smaller one.
+ </p>
+ <br><br>
+
+ <img src="max_width.jpg" style="max-width:70%;height:auto;">
+ <br><br>
+
+<picture>
+    <source srcset="shrine.jpg" media="(max-width: 600px)">
+    <source srcset="shrine.jpg" media="(max-width: 1500px)">
+    <source srcset="castle.jpg">
+    <img src="castle.jpg" alt="castle" style="max-width:70%;">
+</picture> 
+<br><br>
+
+<div class="left">
+    <h2>First Menu</h2>
+    <p>This is within the first menu. Will drop down below the h2 when smaller</p>
+</div>
+
+<div class="main">
+    <h2>Second Menu</h2>
+    <p>This is within the second menu. Will drop down below the h2 when smaller</p>
+</div>
+
+<div class="right">
+    <h2>Third Menu</h2>
+    <p>This is within the third menu. Will drop down below the h2 when smaller</p>
+</div>
+
+<div class="menu">
+    <h2>Fourth Menu</h2>
+    <p>This is within the fourth menu. Will drop down below the h2 when smaller</p>
+</div>
+<br><br>
+
+
+
+</body>
+</html>

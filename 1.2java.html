@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="style.css">
+
+    <title>Task 1.2P </title>
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+
+</head>
+
+<body>
+
+<div class="top">
+    <a href="1.2p.html">Part 1: Responsive Web Design</a>
+</div>
+
+<div class="top">
+    <a href="1.2java.html"> Task 1.2P - Part 2: Javascript</a>
+</div>
+<br><br>
+
+<div class="middle">
+    <h1> Part 2: Javascript</h1>
+</div>
+
+<div class="middle">
+    <h1>String Methods</h1>
+</div>
+<p>First example: What is the lenght of the string "Hello Teacher"? </p>
+<p id="string"></p>
+
+<script>
+    let text = "Hello Teacher";
+    document.getElementById("string").innerHTML = text.length;
+</script>
+<br>
+
+<p>Second example: What if we slice "Banana, Pear, Strawberry, Apricot" for Strawberry?</p>
+<p id="string2"></p>
+<script>
+    let text2 = "Banana, Pear, Strawberry, Apricot";
+    let part = text2.slice(13,24);
+    document.getElementById("string2").innerHTML = part;
+</script>
+<br>
+
+<p>Third example: What if we slice Banana and Pear from "Banana, Pear, Strawberry, Apricot"?</p>
+<p id="string3"></p>
+<script>
+    let text3 = "Banana, Pear, Strawberry, Apricot";
+    let part2 = text3.slice(13)
+    document.getElementById("string3").innerHTML = part2;
+</script>
+<br>
+
+<p>Fourth example: Convert string to upper case</p>
+
+<button onclick="myFunction()">Try it</button>
+
+<p id="demo">Hello Teacher!</p>
+
+<script>
+    function myFunction() {
+        let text = document.getElementById("demo").innerHTML;
+        document.getElementById("demo").innerHTML =
+        text.toUpperCase();
+    }
+</script>
+<br>
+
+<p>Fifth example: Using trim method to shorten text length </p>
+
+<p id="demo2"></p>
+
+<script>
+    let text1 = "       Hi Teacher!      ";
+    let text4 = text1.trim();
+
+    document.getElementById("demo2").innerHTML =
+    "Length text1 = " + text1.length + "<br>Length text4 = " + text4.length;
+
+</script>
+
+<div class="middle">
+    <h1>Number Methods</h1>
+</div>
+<br>
+
+<p>First example: we can add numbers: x(40) + y(5) = z </p>
+
+<p id="demo3"></p>
+
+<script>
+    let x = 40;
+    let y = 5;
+    let z = x + y;
+    document.getElementById("demo3").innerHTML = z;
+</script>
+<br>
+
+<p>Second example: putting string together creating concatenation: x(40) / y(5) = z </p>
+
+<p id="demo4"></p>
+
+<script>
+    let z1 = x / y;
+    document.getElementById("demo4").innerHTML = z1;
+</script>
+<br>
+
+<p>Third example: Using toString to convert numbers in string</p>
+
+<p id="demo5"></p>
+
+<script>
+    let x1 = 1234;
+    document.getElementById("demo5").innerHTML =
+    x1.toString() + "<br>" +
+    (1234).toString() + "<br>" +
+    (1000 + 234).toString();
+</script>
+
+<p>Fourth example: Using toFixed methods with the number 8.698515 </p>
+
+<p id="demo6"></p>
+
+<script>
+    let x2 = 8.698515;
+    document.getElementById("demo6").innerHTML =
+    x2.toFixed(0) + "<br>" +
+    x2.toFixed(1) + "<br>" +
+    x2.toFixed(3) + "<br>" +
+    x2.toFixed(5) + "<br>" +
+    x2.toFixed(7);
+</script>
+
+<p>Fifth example: we can convert a date into a number</p>
+
+<p id="demo7"></p>
+<script>
+    let x3 = new Date("1996-05-28");
+    document.getElementById("demo7").innerHTML = Number(x3);
+</script>
+<br>
+
+<p> Sixth exmaple: using parseFloat to convert strings to numbers:</p>
+
+<p id="demo8"></p>
+
+<script>
+    document.getElementById("demo8").innerHTML =
+    Number.parseFloat("13") + "<br>" +
+    Number.parseFloat("13.84") + "<br>" +
+    Number.parseFloat("26 39 13") + "<br>" +
+    Number.parseFloat("15 years") + "<br>" +
+    Number.parseFloat("1years 13");
+</script>
+<br>
+
+<div class="middle">
+    <h1>Array Methods</h1>
+</div>
+<br>
+
+<p>First example: using javascript arrays to find length on properties <br> 
+    Get length of fruits in: "Apple", "Apricot", "Pear", "Strawberry", "Banana"</p>
+
+<p id="demo9">  </p>
+
+<script>
+    const fruits = ["Apple", "Apricot", "Pear", "Strawberry", "Banana"];
+    let size = fruits.length;
+    document.getElementById("demo9").innerHTML = size;
+</script>
+<br>
+
+<p>Second example: returning arrays into separted strings</p>
+
+<p id="demo10"></p>
+
+<script>
+    const fruits2 = ["Apple", "Apricot", "Pear", "Strawberry", "Banana"];
+    document.getElementById("demo10").innerHTML = fruits2.toString();
+</script>
+<br>
+
+<p>Third example: Popping last item from arrays</p>
+
+<p id="demo11"></p>
+<p id="demo12"></p>
+
+<script>
+    const fruits3  = ["Apple", "Apricot", "Pear", "Strawberry", "Banana"];
+    document.getElementById("demo11").innerHTML = fruits3;
+    fruits3.pop();
+    document.getElementById("demo12").innerHTML = fruits3;
+</script>
+<br>
+
+<p>Fourth example: Pushing item into arrays</p>
+<p>New length of array</p>
+
+<p id="demo13"></p>
+<p id="demo14"></p>
+
+<script>
+    const fruits4  = ["Apple", "Apricot", "Pear", "Strawberry", "Banana"];
+    document.getElementById("demo13").innerHTML = fruits4.push("Cherries");
+    document.getElementById("demo14").innerHTML = fruits4;
+</script>
+<br>
+
+<p>Fifth example: Shifting array, will remove first element.</p>
+
+<p id="demo15"></p>
+<p id="demo16"></p>
+
+<script>
+    const number  = ["11", "8", "Thirty Three", "84", "Nine"];
+    document.getElementById("demo15").innerHTML = number;
+    number.shift();
+    document.getElementById("demo16").innerHTML = number;
+</script>
+<br>
+
+<p>Sixth example: putting elements in array using index number replaces old array</p>
+
+<p id="demo17"></p>
+<p id="demo18"></p>
+
+<script>
+    const number1  = ["11", "8", "Thirty Three", "84", "Nine"];
+    document.getElementById("demo17").innerHTML = number1;
+    number1[2] = "33";
+    number1[4] = "9";
+    document.getElementById("demo18").innerHTML = number1;
+</script>
+<br>
+
+<div class="middle">
+    <h1>Date Methods</h1>
+</div>
+<br>
+
+<p>First example: Gives current time when opened browser.</p>
+
+<p id="demo19"></p>
+
+<script>
+    const d = new Date();
+    document.getElementById("demo19").innerHTML = d;
+</script>
+<br>
+
+<p>Second example: Gives new date when open browser.</p>
+
+<p id="demo20"></p>
+
+<script>
+    const d2 = new Date("2023-05-28");
+    document.getElementById("demo20").innerHTML = d2;
+</script>
+<br>
+
+<p>Third example: Gives new date using 7 numbers.</p>
+
+<p id="demo21"></p>
+
+<script>
+    const d3 = new Date(2008, 8, 11, 16, 28, 0);
+    document.getElementById("demo21").innerHTML = d3;
+</script>
+<br>
+
+<p>Fourth example: Using two digits to role the year to 19xx </p>
+
+<p id="demo22"></p>
+
+<script>
+    const d4 = new Date(96, 4, 28);
+    document.getElementById("demo22").innerHTML = d4;
+</script>
+<br>
+
+<p>Fifth example: Converting a date using the utc standard.</p>
+
+<p id="demo23"></p>
+
+<script>
+    const d5 = new Date();
+    document.getElementById("demo23").innerHTML = d5.toUTCString();
+</script>
+<br>
+
+<div class="middle">
+    <h1>Functions Methods</h1>
+</div>
+<br>
+
+<p> First example: Using functions to return value a * b (5*8)</p>
+
+<p id="demo24"></p>
+
+<script>
+    let x4 = myFunction(5,8);
+    document.getElementById("demo24").innerHTML = x4;
+
+    function myFunction(a, b) {
+        return a * b;
+    }
+</script>
+<br>
+
+<p> Second example: Use function to convert Fahrenheit (58) to Celsius</p>
+
+<p id="demo25"></p>
+
+<script>
+    function toCelsius(f) {
+        return (5/9) * (f-32);
+    }
+
+    let value = toCelsius(58);
+    document.getElementById("demo25").innerHTML = value;
+</script>
+<br>
+
+</body>
+</html>
